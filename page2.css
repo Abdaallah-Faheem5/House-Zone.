@@ -1,0 +1,500 @@
+body {
+  background-image: url("./silver.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+.move {
+  animation: moveSection 5s infinite;
+}
+
+@keyframes moveSection {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .move {
+    height: 50px;
+  }
+
+  .move img {
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .HZ {
+    height: 70px;
+  }
+
+  .HZ img {
+    height: 70px;
+  }
+}
+
+.cared {
+  position: relative;
+  width: 275px;
+  height: 550px;
+  outline: 2px solid #00000083;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(2, 87, 83, 0.17);
+}
+
+/*checkbox*/
+input[type="checkbox"] {
+  display: none;
+}
+
+/*label left-side*/
+label.cared-toggle-label {
+  display: block;
+  position: absolute;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #ffffff66;
+  background: #00000033;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+label.cared-toggle-label::after,
+label.cared-toggle-label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 6px;
+  transform: translate(-40%, calc(-50% - 8px)) rotate(40deg);
+  border-radius: 3px;
+  background-color: #ebebeb99;
+  transition: all 0.5s ease-in-out;
+}
+
+label.cared-toggle-label::after {
+  transform: translate(-40%, calc(-50% + 8px)) rotate(-40deg);
+}
+
+label.cared-toggle-label:hover {
+  left: 85%;
+}
+
+label.cared-toggle-label:hover::after,
+label.cared-toggle-label:hover::before {
+  transform: translate(-40%, calc(-50% - 5px)) rotate(23deg);
+  background-color: #f0f0f0ff;
+}
+
+label.cared-toggle-label:hover::after {
+  transform: translate(-40%, calc(-50% + 5px)) rotate(-23deg);
+}
+
+/*label right-side*/
+.cared-toggle:checked ~ label.cared-toggle-label {
+  left: 17%;
+}
+
+.cared-toggle:checked ~ label.cared-toggle-label:hover {
+  left: 15%;
+}
+
+.cared-toggle:checked ~ label.cared-toggle-label::before {
+  transform: translate(-60%, calc(-50% - 8px)) rotate(-40deg);
+}
+
+.cared-toggle:checked ~ label.cared-toggle-label::after {
+  transform: translate(-60%, calc(-50% + 8px)) rotate(40deg);
+}
+
+.cared-toggle:checked ~ label.cared-toggle-label:hover::before {
+  transform: translate(-60%, calc(-50% - 5px)) rotate(-23deg);
+}
+
+.cared-toggle:checked ~ label.cared-toggle-label:hover::after {
+  transform: translate(-60%, calc(-50% + 5px)) rotate(23deg);
+}
+
+/*background left-side*/
+.cared-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: 0% 50%;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+}
+
+#cared-1 .cared-image {
+  background-image: url(./مطحنة-بهارات1.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-2 .cared-image {
+  background-image: url(./مطحنة-بهارات1.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-3 .cared-image {
+  background-image: url(./مطحنة-بهارات3.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-4 .cared-image {
+  background-image: url(./مطحنة-بهارات4.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-5 .cared-image {
+  background-image: url(./مطحنة-بهارات5.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-6 .cared-image {
+  background-image: url(./مطحنة-بهارات5.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-7 .cared-image {
+  background-image: url(./مطحنة-بهارات7.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+#cared-8 .cared-image {
+  background-image: url(./مطحنة-بهارات7.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+
+.cared:hover .cared-image {
+  opacity: 1;
+}
+
+label.cared-toggle-label:hover + .cared-image {
+  transition: all 2.5s ease;
+  background-position: 10% 50%;
+}
+
+/*background right-side*/
+.cared-toggle:checked ~ .cared-image {
+  background-position: 100% 50%;
+}
+
+.cared-toggle:checked ~ label.cared-toggle-label:hover + .cared-image {
+  transition: all 2.5s ease;
+  background-position: 90% 50%;
+}
+
+/*card header*/
+.cared-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #00000099;
+  border-bottom: 1px solid #ffffff66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.cared-header img {
+  color: #f0f0f0f0;
+  font-weight: 700;
+  line-height: 0.8em;
+  font-size: 2em;
+  text-align: center;
+}
+
+/*card content*/
+.cared-content {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 100px;
+  padding: 1em;
+  transition: all 0.25s ease-in-out;
+}
+
+.cared-content a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  font-weight: 300;
+  text-decoration: none;
+  background: #00000033;
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  border: 1px solid #ffffff33;
+  background-color: #00000066;
+  margin: 30px 10px;
+  transition: all 0.25s;
+}
+
+.cared-content a:hover {
+  border: 1px solid #ffffffcc;
+  background-color: #ffcc7033;
+}
+
+.cared-content p {
+  margin-bottom: 1.15em;
+}
+
+.cared-content.left-content p {
+  margin-right: 30%;
+}
+
+.cared-content.right-content p {
+  margin-left: 30%;
+}
+
+/*img*/
+.cared-content img {
+  margin-bottom: 1.15em;
+}
+
+.cared-content.left-content img {
+  margin-right: 30%;
+}
+
+.cared-content.right-content img {
+  margin-left: 30%;
+}
+
+/*card-content left-side*/
+.cared-content.left-content {
+  opacity: 1;
+  left: 0;
+  background-image: linear-gradient(to right, #000000aa, #00000000);
+  transition-delay: 0.25s;
+}
+
+.cared-content.right-content {
+  opacity: 0;
+  text-align: right;
+  left: 300px;
+  background-image: linear-gradient(to left, #000000aa, #00000000);
+  transition-delay: 0s;
+}
+
+/*card content right-side*/
+.cared-toggle:checked ~ .cared-content.left-content {
+  opacity: 0;
+  left: -300px;
+  transition-delay: 0s;
+}
+
+.cared-toggle:checked ~ .cared-content.right-content {
+  opacity: 1;
+  left: 0px;
+  transition-delay: 0.25s;
+}
+
+/*card footer*/
+.cared-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #00000099;
+  backdrop-filter: blur(4px);
+  border-top: 1px solid #ffffff66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.cared-footer button {
+  display: block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #ffffff33;
+  background-color: #199da699;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
+}
+
+.cared-footer button:hover {
+  border: 1px solid #ffffffcc;
+  background-color: #17556233;
+}
+
+/*-------------------------*/
+/*    open card section    */
+/*-------------------------*/
+
+/*label open card*/
+label.open-cared-label {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+input.open-cared:checked + label.open-cared-label {
+  top: 88%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label.open-cared-label::before {
+  content: "X";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+  border-radius: 50%;
+  border: 1px solid #ffffff33;
+  background: #00000066;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  border-top-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+label.open-cared-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: #00000066;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+label.open-cared-label:hover::after {
+  width: 1250px;
+  height: 1250px;
+}
+
+input.open-cared:checked + label.open-cared-label::before {
+  content: "OPEN";
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  overflow: hidden;
+  transition-delay: 0;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+input.open-cared:checked ~ label.open-cared-label:hover::before {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+
+input.open-cared:checked ~ label.open-cared-label::after {
+  background: #00000000;
+}
+
+input.open-cared:checked ~ label.cared-toggle-label {
+  opacity: 0;
+  left: 120%;
+}
+
+/*background open-card*/
+input.open-cared:checked ~ .cared-image {
+  background-position: 50% 50%;
+  opacity: 1;
+}
+
+/*card-header open-card*/
+input.open-cared:checked ~ .cared-header {
+  opacity: 0;
+  top: -100px;
+}
+
+/*card-content open-card*/
+input.open-cared:checked ~ .cared-content {
+  opacity: 0;
+}
+
+input.open-cared:checked ~ .cared-content.left-content {
+  left: -300px;
+  transition-delay: 0s;
+}
+
+input.open-cared:checked ~ .cared-content.right-content {
+  left: 300px;
+  transition-delay: 0s;
+}
+
+/*card-footer open-card*/
+input.open-cared:checked ~ .cared-footer {
+  opacity: 0;
+  bottom: -100px;
+}

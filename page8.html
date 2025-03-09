@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./page8.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./logo.png" type="image/png">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Zone</title>
+    <link rel="icon" href="./logo.png" type="image/png" />
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./HuseZone.html">
+          <div class="containar">
+            <div class="move">
+              <img
+                class="img-logo"
+                src="./logo.png"
+                alt="LOGO"
+                height="100"
+              />
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text"
+          style="background-image: url('./silver.jpg')"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              House Zone
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./HuseZone.html"
+                  style="color: black"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: black"
+                >
+                  المنتجات
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="./page1.html">صوبات</a></li>
+                    <li><a class="dropdown-item" href="./page2.html">مطاحن البهارات</a></li>
+                    <li><a class="dropdown-item" href="./page3.html">مكانس </a></li>
+                    <li><a class="dropdown-item" href="./page4.html"> ماكنات القهوة</a></li>
+                    <li><a class="dropdown-item" href="./page5.html"> شاشات التلفاز</a></li>
+                    <li><a class="dropdown-item" href="./page6.html">اجهزة الكوي</a></li>
+                    <li><a class="dropdown-item" href="./page7.html">عجانات</a></li>
+                    <li><a class="dropdown-item" href="./page8.html">خلاطات</a></li>
+                </ul>
+              </li>
+            </ul>
+            <hr>
+                <div class="cart hidden" id="cart-section">
+                  <h2>السلة</h2>
+                  <br>
+                  <h6 id="cart-items"></h6>
+                  
+                  <h5 style="margin-left: 20px;">الإجمالي: <span id="total-price">0</span> دينار</h5>
+                  
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container" style="justify-content: center; width: 20px">
+      <div class="wrapper">
+        <img src="./خلاط.png" />
+      </div>
+    </div>
+    <br />
+
+    <div class="container" style="width: 100%;">
+      <!-- card 1 خلاط-->
+      <div class="wrapper">
+        <div class="cared" id="cared-1">
+          <input type="checkbox" class="open-cared" id="open-cared-1" checked />
+          <label class="open-cared-label" for="open-cared-1"></label>
+          <input type="checkbox" class="cared-toggle" id="cared-toggle-1" />
+          <label class="cared-toggle-label" for="cared-toggle-1"></label>
+          <div class="cared-image"></div>
+          <div class="cared-header">
+            <img src="./هيد-خلاط1.png" height="100px" />
+          </div>
+          <div class="cared-content left-content">
+            <div style="height: 85px"></div>
+            <img src="./نص-خلاط1.png" height="250px" />
+          </div>
+          <div class="cared-content right-content">
+            <div style="height: 75px"></div>
+            <b>
+              <p>
+                أدوات متعددة الاستخدامات لتحضير العصائر، الصلصات،
+                 الشوربات، وتقطيع وخلط المكونات بسهولة. تجمع بين القوة والكفاءة
+                 بفضل محركاتها عالية الأداء وشفراتها الحادة. تصميم عصري وسهولة
+                 في الاستخدام والتنظيف، مما يجعلها الخيار المثالي لكل مطبخ عصري.
+              </p>
+            </b>
+          </div>
+          <div class="cared-footer">
+             <div class="products">
+            <div class="product">
+            <button class="add-to-cart" data-id="69" data-name="خلاط مع مطحنة فيلبس 2 لتر  " data-price="69">🛒اضف الى السلة</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 2  خلاط-->
+      <div class="wrapper">
+        <div class="cared" id="cared-2">
+          <input type="checkbox" class="open-cared" id="open-cared-2" checked />
+          <label class="open-cared-label" for="open-cared-2"></label>
+          <input type="checkbox" class="cared-toggle" id="cared-toggle-2" />
+          <label class="cared-toggle-label" for="cared-toggle-2"></label>
+          <div class="cared-image"></div>
+          <div class="cared-header">
+            <img src="./هيد-خلاط2.png" height="100px" />
+          </div>
+          <div class="cared-content left-content">
+            <div style="height: 85px"></div>
+            <img src="./نص-خلاط2.png" height="250px" />
+          </div>
+          <div class="cared-content right-content">
+            <div style="height: 75px"></div>
+            <b>
+              <p>
+                أدوات متعددة الاستخدامات لتحضير العصائر، الصلصات،
+                الشوربات، وتقطيع وخلط المكونات بسهولة. تجمع بين القوة والكفاءة
+                بفضل محركاتها عالية الأداء وشفراتها الحادة. تصميم عصري وسهولة
+                في الاستخدام والتنظيف، مما يجعلها الخيار المثالي لكل مطبخ عصري.
+              </p>
+            </b>
+          </div>
+          <div class="cared-footer">
+             <div class="products">
+            <div class="product">
+            <button class="add-to-cart" data-id="70" data-name="خلاط كونتي 1.75 لتر" data-price="44">🛒اضف الى السلة</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 3 خلاط-->
+      <div class="wrapper">
+        <div class="cared" id="cared-3">
+          <input type="checkbox" class="open-cared" id="open-cared-3" checked />
+          <label class="open-cared-label" for="open-cared-3"></label>
+          <input type="checkbox" class="cared-toggle" id="cared-toggle-3" />
+          <label class="cared-toggle-label" for="cared-toggle-3"></label>
+          <div class="cared-image"></div>
+          <div class="cared-header">
+            <img src="./هيد-خلاط3.png" height="100px" />
+          </div>
+          <div class="cared-content left-content">
+            <div style="height: 85px"></div>
+            <img src="./نص-خلاط3.png" height="250px" />
+          </div>
+          <div class="cared-content right-content">
+            <div style="height: 75px"></div>
+            <b>
+              <p>
+                أدوات متعددة الاستخدامات لتحضير العصائر، الصلصات،
+                الشوربات، وتقطيع وخلط المكونات بسهولة. تجمع بين القوة والكفاءة
+                بفضل محركاتها عالية الأداء وشفراتها الحادة. تصميم عصري وسهولة
+                في الاستخدام والتنظيف، مما يجعلها الخيار المثالي لكل مطبخ عصري.
+              </p>
+            </b>
+          </div>
+          <div class="cared-footer">
+             <div class="products">
+            <div class="product">
+            <button class="add-to-cart" data-id="71" data-name="خلاط و مفرمة لحمة و مطحنة 1.5 لتر" data-price="32">🛒اضف الى السلة</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 4 خلاط-->
+      <div class="wrapper">
+        <div class="cared" id="cared-4">
+          <input type="checkbox" class="open-cared" id="open-cared-4" checked />
+          <label class="open-cared-label" for="open-cared-4"></label>
+          <input type="checkbox" class="cared-toggle" id="cared-toggle-4" />
+          <label class="cared-toggle-label" for="cared-toggle-4"></label>
+          <div class="cared-image"></div>
+          <div class="cared-header">
+            <img src="./هيد-خلاط4.png" height="100px" />
+          </div>
+          <div class="cared-content left-content">
+            <div style="height: 85px"></div>
+            <img src="./نص-خلاط4.png" height="250px" />
+          </div>
+          <div class="cared-content right-content">
+            <div style="height: 75px"></div>
+            <b>
+              <p>
+                أدوات متعددة الاستخدامات لتحضير العصائر، الصلصات،
+                 الشوربات، وتقطيع وخلط المكونات بسهولة. تجمع بين القوة والكفاءة
+                 بفضل محركاتها عالية الأداء وشفراتها الحادة. تصميم عصري وسهولة
+                 في الاستخدام والتنظيف، مما يجعلها الخيار المثالي لكل مطبخ عصري.
+            </b>
+          </div>
+          <div class="cared-footer">
+             <div class="products">
+            <div class="product">
+            <button class="add-to-cart" data-id="72" data-name="خلاط مع مطحنة فيلبس 1 لتر" data-price="37">🛒اضف الى السلة</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="container" style="justify-content: center; width: 20px">
+        <div class="wrapper">
+          <img src="./محضرات طعام.png" />
+        </div>
+      </div>
+      <br />
+    <div class="container" style="width: 100%">
+      <!-- card 1 محضرة طعام-->
+      <div class="wrapper">
+        <div class="cared" id="cared-5">
+          <input type="checkbox" class="open-cared" id="open-cared-5" checked />
+          <label class="open-cared-label" for="open-cared-5"></label>
+          <input type="checkbox" class="cared-toggle" id="cared-toggle-5" />
+          <label class="cared-toggle-label" for="cared-toggle-5"></label>
+          <div class="cared-image"></div>
+          <div class="cared-header">
+            <img src="./هيد-محضرة-طعام1.png" height="100px" />
+          </div>
+          <div class="cared-content left-content">
+            <div style="height: 85px"></div>
+            <img src="./نص-محضرة-طعام2.png" height="250px" />
+          </div>
+          <div class="cared-content right-content">
+            <div style="height: 75px"></div>
+            <b>
+              <p>
+                أدوات متعددة الاستخدامات لتحضير العصائر، الصلصات،
+                 الشوربات، وتقطيع وخلط المكونات بسهولة. تجمع بين القوة والكفاءة
+                 بفضل محركاتها عالية الأداء وشفراتها الحادة. تصميم عصري وسهولة
+                 في الاستخدام والتنظيف، مما يجعلها الخيار المثالي لكل مطبخ عصري.
+              </p>
+            </b>
+          </div>
+          <div class="cared-footer">
+             <div class="products">
+            <div class="product">
+            <button class="add-to-cart" data-id="73" data-name="محضرة طعام كونتي 750 واط  " data-price="52">🛒اضف الى السلة</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 2  محضرة طعام-->
+      <div class="wrapper">
+        <div class="cared" id="cared-6">
+          <input type="checkbox" class="open-cared" id="open-cared-6" checked />
+          <label class="open-cared-label" for="open-cared-6"></label>
+          <input type="checkbox" class="cared-toggle" id="cared-toggle-6" />
+          <label class="cared-toggle-label" for="cared-toggle-6"></label>
+          <div class="cared-image"></div>
+          <div class="cared-header">
+            <img src="./هيد-محضرة-طعام2.png" height="100px" />
+          </div>
+          <div class="cared-content left-content">
+            <div style="height: 85px"></div>
+            <img src="./نص-محضرة-طعام2.png" height="250px" />
+          </div>
+          <div class="cared-content right-content">
+            <div style="height: 75px"></div>
+            <b>
+              <p>
+                أدوات متعددة الاستخدامات لتحضير العصائر، الصلصات،
+                 الشوربات، وتقطيع وخلط المكونات بسهولة. تجمع بين القوة والكفاءة
+                 بفضل محركاتها عالية الأداء وشفراتها الحادة. تصميم عصري وسهولة
+                 في الاستخدام والتنظيف، مما يجعلها الخيار المثالي لكل مطبخ عصري.
+              </p>
+            </b>
+          </div>
+          <div class="cared-footer">
+             <div class="products">
+            <div class="product">
+            <button class="add-to-cart" data-id="74" data-name="محضرة طعام آرشيا 2 في 1 " data-price="59">🛒اضف الى السلة</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <script src="script.js"></script>
+  </body>
+</html>
